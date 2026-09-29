@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="description" content="平林慧遠の自己紹介。岩手県で林業と農業に取り組んでいます。AIセキュリティー講座 受講生プロフィール。">
+<title>平林慧遠のホームページ</title>
+<link rel="icon" type="image/svg+xml" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect width='32' height='32' fill='%23f0f0ff'/%3E%3Ctext x='16' y='25' text-anchor='middle' font-size='26' font-family='serif' fill='%232b583b'%3E平%3C/text%3E%3C/svg%3E">
+<style>
+*{box-sizing:border-box}
+html{scroll-behavior:smooth;scroll-padding-top:24px}
+body{margin:0;background:#fff;color:#000;font:18px/1.5 Arial,"MS PGothic","Hiragino Kaku Gothic ProN","Yu Gothic",Meiryo,sans-serif}
+a,a:visited,a:hover,a:active{color:#0000ff;text-decoration:underline;text-underline-offset:1px}
+a:focus-visible{outline:2px solid #0000ff;outline-offset:4px}
+.main{position:relative;isolation:isolate;min-height:100vh;margin-left:clamp(220px,21vw,280px);padding:50px 4px 32px;overflow:hidden}
+.wallpaper{position:absolute;inset:0;z-index:-1;overflow:hidden;pointer-events:none;display:grid;grid-template-columns:repeat(8,450px);grid-auto-rows:114px;padding:8px 10px;color:#c9eed8;font:italic 54px/1.2 "Times New Roman",serif;white-space:nowrap;user-select:none}
+.wallpaper span{transform:none}
+h1{font-size:36px;line-height:1.4;font-weight:700;letter-spacing:0;text-align:center;margin:0 0 28px}
+.top{display:grid;grid-template-columns:minmax(260px,38.5%) minmax(0,1fr);gap:14px;max-width:1320px;margin:0 auto;align-items:start}
+.identity{padding-top:70px;min-width:0}
+.portrait{position:relative;display:block;width:100%;aspect-ratio:200/242;overflow:hidden;border:0;padding:0;border-radius:0;background:#fff;cursor:pointer;touch-action:manipulation;-webkit-tap-highlight-color:transparent;isolation:isolate}
+.portrait:focus-visible{outline:3px solid #0000ff;outline-offset:4px}
+.portrait-layer{position:absolute;display:block;inset:0;overflow:hidden;pointer-events:none;transition:opacity 480ms ease,transform 650ms cubic-bezier(.2,.7,.2,1)}
+.portrait-normal{opacity:1;transform:scale(1)}
+.portrait-normal img{position:absolute;display:block;width:339%;max-width:none;height:auto;left:-63.5%;top:-22.727273%}
+.portrait-hero{opacity:0;transform:scale(1.08)}
+.portrait-hero img{display:block;width:100%;height:100%;object-fit:cover;object-position:center 35%}
+.portrait.is-hero .portrait-normal{opacity:0;transform:scale(1.04)}
+.portrait.is-hero .portrait-hero{opacity:1;transform:scale(1)}
+.transform-light{position:absolute;inset:-25%;z-index:2;pointer-events:none;background:linear-gradient(115deg,transparent 30%,rgba(220,255,215,.3) 40%,rgba(255,255,255,.9) 50%,rgba(255,210,235,.4) 60%,transparent 70%);opacity:0}
+.portrait-hint{font-size:14px;line-height:1.5;margin:8px 0 0;color:#444}
+@media(prefers-reduced-motion:reduce){.portrait-layer{transition:none;transform:none!important}.transform-light{display:none}}
+.nameplate{min-height:0;padding:24px 0 0;display:flex;flex-direction:column;align-items:flex-start;justify-content:center;text-align:left}
+.nameplate .name{margin:0 0 4px;font-size:18px;font-weight:400;line-height:1.5;letter-spacing:0}
+.personal-details p{margin:4px 0 0;font-size:18px}
+.nameplate .roman{font:18px/1.5 Arial,sans-serif;letter-spacing:0;color:#000}
+.nameplate .caption{font-size:18px;color:#000;margin:20px 0 0}
+.profile-list{margin:22px 0 20px;display:grid;grid-template-columns:4.5em 1fr;gap:5px 8px}
+.profile-list dt,.profile-list dd{margin:0;font-weight:400}
+.intro{font-size:16px;line-height:1.6;margin:22px 0}
+.sidebar{position:fixed;inset:0 auto 0 0;width:clamp(220px,21vw,280px);padding:57px 12px 30px;background:#f0f0ff;border-right:5px ridge #ccc;overflow-y:auto}
+.nav-title,.side-note{display:none}
+.sidebar ul{list-style:none;padding:0;margin:0}
+.sidebar li{display:flex;gap:6px;align-items:baseline;margin:0 0 33px;white-space:nowrap}
+.dot{color:var(--dot);font-size:18px}
+.news-title{text-align:center;font-size:18px;font-weight:400;letter-spacing:0;line-height:1.5;margin:0 0 40px;padding:0}
+.news{border-top:1px solid #999;padding:14px 6px 30px;font-weight:700;line-height:1.5}
+.news .label{margin:0 0 3px;font-size:18px}
+.news p:not(.label){margin:0 8% 24px 10%;max-width:610px}
+.news p:last-child{margin-bottom:0}
+.news .small{font-size:18px}
+.red{color:#000}
+.news:last-child{border-bottom:1px solid #999}
+.game-box{max-width:960px;margin:42px auto 0;padding:14px;border:1px solid #999;background:#fff;scroll-margin-top:24px}
+.game-box h2{font-size:18px;margin:0 0 10px}
+.game-frame{display:block;width:100%;aspect-ratio:16/11;border:0;background:#fffdf2}
+.game-box .game-link{font-size:15px;margin:10px 0 0}
+.body-sections{max-width:1320px;margin:42px auto 0;padding-left:calc(38.5% + 10px)}
+.section{border-top:1px solid #999;padding:20px 6px 28px;scroll-margin-top:24px}
+.section h2{font-size:18px;line-height:1.5;margin:0 0 14px;font-weight:700;letter-spacing:0}
+.section p{margin:12px 0}
+.section ul{padding-left:1.5em}
+.work-table{width:100%;border-collapse:collapse;background:transparent}
+.work-table th,.work-table td{border:1px solid #999;padding:12px;text-align:left;vertical-align:top;font-size:16px}
+.work-table th{width:88px;font-weight:400}
+.back{display:block;text-align:right;margin-top:20px;font-size:16px}
+.footer{max-width:1320px;margin:0 auto;padding-top:24px;border-top:1px solid #999;text-align:center;font-size:14px}
+.footer p{margin:6px 0}
+@media(min-width:1400px){.body-sections{padding-left:calc(38.5% + 10px)}}
+@media(max-width:700px){
+body{font-size:16px}.sidebar{position:relative;width:100%;padding:12px 16px;background:#f0f0ff;border-right:0;border-bottom:4px ridge #ccc;overflow:visible}.sidebar ul{display:flex;flex-wrap:wrap;gap:6px 17px}.sidebar li{margin:0;white-space:normal}.dot{font-size:14px}.main{margin-left:0;padding:26px 16px 24px}h1{font-size:26px;margin-bottom:25px}
+.wallpaper{font-size:40px;grid-template-columns:repeat(8,345px);grid-auto-rows:105px}
+.top{grid-template-columns:1fr;gap:28px}.identity{padding-top:0}.portrait{max-width:390px}.nameplate{min-height:0;padding:12px 0}.nameplate .name{font-size:18px}.nameplate .roman,.nameplate .caption{font-size:16px}.nameplate .caption{margin-top:10px}
+.profile-list{margin:16px 0}.intro{margin:16px 0}.sidebar li{font-size:16px}
+.news-title{margin-bottom:24px}.news p:not(.label){margin-left:7%;margin-right:2%}.news .label,.news .small{font-size:16px}
+.game-box{margin-top:28px;padding:10px}.game-frame{aspect-ratio:auto;height:520px}.body-sections{padding-left:0;margin-top:28px}.work-table th,.work-table td{padding:9px}.work-table th{width:5em}
+}
+@media(prefers-reduced-motion:reduce){html{scroll-behavior:auto}}
+</style>
+</head>
+<body id="top">
+<nav class="sidebar" aria-label="メインメニュー">
+<p class="nav-title">平林慧遠</p>
+<ul>
+<li><span class="dot" style="--dot:#208c38" aria-hidden="true">●</span><a href="#top">トップ</a></li>
+<li><span class="dot" style="--dot:#ec8ba9" aria-hidden="true">●</span><a href="#profile">プロフィール</a></li>
+<li><span class="dot" style="--dot:#e64fa0" aria-hidden="true">●</span><a href="#game-section">ゲーム</a></li>
+<li><span class="dot" style="--dot:#319cdb" aria-hidden="true">●</span><a href="#work">仕事について</a></li>
+<li><span class="dot" style="--dot:#c67c00" aria-hidden="true">●</span><a href="#ai">AIとの関わり</a></li>
+<li><span class="dot" style="--dot:#9256bf" aria-hidden="true">●</span><a href="#learning">講座で学びたいこと</a></li>
+<li><span class="dot" style="--dot:#cb3535" aria-hidden="true">●</span><a href="#message">ひとこと</a></li>
+</ul>
+<p class="side-note">AIセキュリティー講座<br>受講生 自己紹介ページ</p>
+</nav>
+<main class="main">
+<div class="wallpaper" aria-hidden="true"></div>
+<h1>平林慧遠のホームページ</h1>
+<div class="top">
+<section class="identity" id="profile" aria-label="プロフィール">
+<button class="portrait" id="portrait-toggle" type="button" aria-label="ヒーロー姿に変身する" aria-pressed="false" aria-describedby="portrait-hint">
+<span class="portrait-layer portrait-normal" aria-hidden="false"><img src="images/hirabayashi-eon.png" alt="赤い帽子と眼鏡を着けた平林慧遠" width="678" height="452" fetchpriority="high" draggable="false"></span>
+<span class="portrait-layer portrait-hero" aria-hidden="true"><img src="images/hirabayashi-hero.webp" alt="畑でポーズをとるピンクと緑のヒーロー姿" width="1368" height="1824" loading="eager" draggable="false"></span>
+<span class="transform-light" aria-hidden="true"></span>
+</button>
+<p class="portrait-hint" id="portrait-hint">写真にマウスを重ねる／タップで変身</p>
+<div class="nameplate"><div class="name">平林慧遠（ひらばやしえおん）</div><span class="roman">Hirabayashi Eon</span><div class="personal-details"><p>生年月日 1853年7月8日</p><p>血液型C型</p></div></div>
+</section>
+<section aria-labelledby="news-heading">
+<h2 class="news-title" id="news-heading">★★★　最新情報　★★★</h2>
+<div class="news"><p class="label">・ AIセキュリティー講座</p><p><a href="#learning">「AIを便利に、安心して使うために」</a></p><p>業務でAIを活用するうえで、情報の扱い方や安全な使い方を学びたいと思っています。</p><p><a href="#learning">講座で学びたいことはこちら</a></p></div>
+<div class="news"><p class="label">・ 仕事</p><p>林業を中心に、ホワイトコーンやぶどうの栽培、環境整備に取り組んでいます。</p><p><a href="#work">仕事についてはこちら</a></p></div>
+<div class="news"><p class="label">・ AI・デジタル活用</p><p>日報の集計、販売データの分析、Webページづくりなど。小さな業務改善を積み重ねています。</p><p><a href="#ai">「現場で役立つAIの活用」</a></p></div>
+</section>
+</div>
+<section class="game-box" id="game-section" aria-labelledby="game-heading">
+<h2 id="game-heading">しもありすマン ホワイトコーンアタック!</h2>
+<iframe class="game-frame" src="game.html" title="しもありすマン ホワイトコーンアタック ゲーム" loading="lazy" sandbox="allow-scripts allow-popups allow-popups-to-escape-sandbox" allow="autoplay; clipboard-write"></iframe>
+<p class="game-link"><a href="game.html" target="_blank" rel="noopener">大きい画面でゲームを開く</a></p>
+</section>
+<div class="body-sections">
+<section class="section" id="work"><h2>仕事について</h2><table class="work-table"><tbody><tr><th scope="row">林業</th><td>合同会社 山守ワークスとして、山の手入れや森林整備の仕事に取り組んでいます。</td></tr><tr><th scope="row">農業</th><td>「しもありすマンふぁーむ」で、ホワイトコーンやぶどうを栽培しています。</td></tr><tr><th scope="row">環境整備</th><td>草刈りなど、地域の環境を整える仕事にも携わっています。</td></tr></tbody></table></section>
+<section class="section" id="ai"><h2>AIとの関わり</h2><p>人手や時間が限られるなかで、現場の負担を少しでも減らしたい。そんな思いで、AIやデジタルツールを活用しています。</p><ul><li>日報や経営データをまとめ、仕事の状況を見えるようにする。</li><li>農産物の販売データを分析し、販売方法の改善につなげる。</li><li>Webページや、日々の仕事に使う小さなアプリをつくる。</li></ul><p>「現場で使えること」を大切にしています。</p></section>
+<section class="section" id="learning"><h2>講座で学びたいこと</h2><p><strong>AIの便利さと、情報を守ることを両立させたいです。</strong></p><ul><li>顧客情報や仕事の資料を、AIに入力するときの判断基準。</li><li>AIの回答や生成したコードを、そのまま使わず確認する方法。</li><li>小さな事業でも続けられる、実用的なセキュリティー対策。</li></ul></section>
+<section class="section" id="message"><h2>ひとこと</h2><p>山や畑の話、AIで仕事を少し楽にする話に興味があります。</p><p>業種の違う皆さんの活用方法も、ぜひ聞かせてください。<br>どうぞよろしくお願いいたします。</p><a class="back" href="#top">トップに戻る</a></section>
+</div>
+<footer class="footer"><p>AIセキュリティー講座　自己紹介</p><p>平林慧遠のホームページ</p><p>最終更新日：2026年9月29日</p></footer>
+</main>
+<script>const wall=document.querySelector('.wallpaper');for(let i=0;i<120;i++){const text=document.createElement('span');text.textContent='Hirabayashi Eon';wall.appendChild(text);}</script>
+<script src="portrait.js" defer></script>
+</body>
+</html>
